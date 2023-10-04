@@ -31,7 +31,7 @@ function buildCard(myCardData) {
 export function buildProductDetailView(productData,displayElementId){
     let displayElement = document.getElementById(displayElementId);
 
-displayElement.innerHTML=`<article><h3>${productData.title}</h3><img  src="${productData.images[1]}"<p>Price: ${productData.price}</p><p>${productData.description}</p><button onclick="window._viewCallBacks.categoriesCallBack('${productData.category}')">back</button></article>`;
+displayElement.innerHTML=`<article><h3>${productData.title}</h3><img  src="${productData.images[1]}"<p>Price: ${productData.price}</p><p>${productData.description}</p><button onclick="window._viewCallBacks.categoriesCallBack('${productData.category}')">go to ${productData.category} </button></article>`;
 
 }
 
