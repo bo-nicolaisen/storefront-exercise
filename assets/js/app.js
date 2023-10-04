@@ -1,10 +1,13 @@
 import {buildCategoryNav,buildProductGallery,buildProductDetailView} from "./modules/view/viewCode.js";
 import {getAllProducts,getProductCategories,getProductsByCategory,getProductById} from "./modules/model/dummyjasonLib.js";
 
+
 let categoriesDisplayElement='categoriesNav';
 let productDisplayElement='productDisplay';
 
 initApp();
+
+
 
 function initApp(){
 
@@ -14,8 +17,6 @@ function initApp(){
 
     });
 
-
-  
         getAllProducts (3,3).then((products)=>{
       
         buildProductGallery(products,productDisplayElement,'Featured products');
@@ -24,6 +25,8 @@ function initApp(){
 
     
 }
+
+
 
 // callBack functions
 
@@ -40,8 +43,6 @@ function categoriesCallBack(clickedCategory){
 }
 
 function productCardCallback(productId){
-
-console.log(productId);
 
 getProductById(productId).then((product)=>{
       
